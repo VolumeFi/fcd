@@ -23,7 +23,7 @@
 ### 1. Clone
 
 ```bash
-$ git clone https://github.com/paloma-money/fcd.git
+$ git clone https://github.com/palomachain/fcd.git
 ```
 
 ### 2. Install packages
@@ -144,4 +144,4 @@ npm run mergeswagger -- -o filename
 
 ## Find LocalPaloma to run whole ecosystem locally
 
-https://github.com/paloma-money/localpaloma
+https://github.com/palomachain/localpaloma
