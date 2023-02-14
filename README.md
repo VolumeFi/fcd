@@ -64,20 +64,20 @@ module.exports = {
 
 ### 4. Configure Environment Variables
 
-| Name                | Description                                                    | Default                                                                                | Module(s)      |
-| ------------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------- |
-| CHAIN_ID            | Chain ID of Paloma network                                      | 12                                                                              | API, Collector |
-| INITIAL_HEIGHT      | The initial height of network. (Define 4724001 for Columbus-5) |                                                                                        | Collector      |
-| LCD_URI             | LCD URI for Paloma network                                      | https://lcd.palomachain.com                                                           | API, Collector |
-| RPC_URI             | RPC URI for Paloma network                                      | _required:_ http://x.x.x.x:26657                                                       | API, Collector |
-| USE_LOG_FILE        | Write logs to logs directory                                   | false                                                                                  | API, Collector |
-| SENTRY_DSN          | Sentry DSN for error management (optional)                     |                                                                                        | API, Collector |
-| SERVER_PORT         | Listening port for API server                                  | 3060                                                                                   | API            |
-| FCD_URI             | FCD URI for Paloma network                                      | https://fcd.palomachain.com                                                           | API            |
-| DISABLE_API         | Disable REST APIs                                              | false                                                                                  | API            |
-| EXCLUDED_ROUTES     | List of regular expression string for excluding routes         | []                                                                                     | API            |
-| MIN_GAS_PRICES      | Minimum gas price by denom object                              | {"uluna": "5.0"} | API            |
-| TOKEN_NETWORK       | Network specifier for whitelisted tokens                       | _required:_ mainnet / testnet                                                          | API            |
+| Name                | Description                                                    | Default                          | Module(s)      |
+| ------------------- | -------------------------------------------------------------- |----------------------------------| -------------- |
+| CHAIN_ID            | Chain ID of Paloma network                                      |                                  | API, Collector |
+| INITIAL_HEIGHT      | The initial height of network. (Define 4724001 for Columbus-5) |                                  | Collector      |
+| LCD_URI             | LCD URI for Paloma network                                      | https://lcd.palomachain.com      | API, Collector |
+| RPC_URI             | RPC URI for Paloma network                                      | _required:_ http://x.x.x.x:26657 | API, Collector |
+| USE_LOG_FILE        | Write logs to logs directory                                   | false                            | API, Collector |
+| SENTRY_DSN          | Sentry DSN for error management (optional)                     |                                  | API, Collector |
+| SERVER_PORT         | Listening port for API server                                  | 3060                             | API            |
+| FCD_URI             | FCD URI for Paloma network                                      | https://fcd.palomachain.com      | API            |
+| DISABLE_API         | Disable REST APIs                                              | false                            | API            |
+| EXCLUDED_ROUTES     | List of regular expression string for excluding routes         | []                               | API            |
+| MIN_GAS_PRICES      | Minimum gas price by denom object                              | {"u": "5.0"}                     | API            |
+| TOKEN_NETWORK       | Network specifier for whitelisted tokens                       | _required:_ mainnet / testnet    | API            |
 
 > In Paloma, we use [direnv](https://direnv.net) for managing environment variable for development. See [sample of .envrc](.envrc_sample)
 
