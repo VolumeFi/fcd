@@ -21,7 +21,7 @@ const packageInfo = {
   version: '1.0.0',
   description: 'Paloma FCD API Docs',
   title: 'Paloma FCD API Docs',
-  url: `${config.FCD_URI}/v1` || 'https://fcd.paloma.dev/v1'
+  url: `${config.FCD_URI}/v1` || 'https://fcd.palomachain.com/v1'
 }
 
 type UrlItem = {
