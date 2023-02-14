@@ -17,11 +17,11 @@ const options = {
 }
 
 const packageInfo = {
-  name: 'Terra FCD',
+  name: 'Paloma FCD',
   version: '1.0.0',
-  description: 'Terra FCD API Docs',
-  title: 'Terra FCD API Docs',
-  url: `${config.FCD_URI}/v1` || 'https://fcd.terra.dev/v1'
+  description: 'Paloma FCD API Docs',
+  title: 'Paloma FCD API Docs',
+  url: `${config.FCD_URI}/v1` || 'https://fcd.palomachain.com/v1'
 }
 
 type UrlItem = {
@@ -36,7 +36,6 @@ type ApiDoc = {
   data: string
   project: string
 }
-
 ;(async function generateApiDoc() {
   const argv = await yargs.options({
     o: {

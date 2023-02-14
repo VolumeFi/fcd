@@ -27,7 +27,7 @@ const transformItemToResponse = (item: MempoolItem): MempoolItemResponse => ({
 
 /**
  * Mempool is a singleton that indexes mempool periodically in local cache
- * for providing transaction queries by hash, and account (terra1..)
+ * for providing transaction queries by hash, and account (paloma1..)
  */
 class Mempool {
   // key = txhash
@@ -71,7 +71,7 @@ class Mempool {
   }
 
   /**
-   * updateMempool queries `unconfirmed_txs` to Terra RPC server and stores it into hashMap and items.
+   * updateMempool queries `unconfirmed_txs` to Paloma RPC server and stores it into hashMap and items.
    * To prepare for situations where RPCWatcher doesn't fire NewBlock events (connection lost, etc.),
    * it additionally removes transactions that no longer exist in cached mempool.
    */

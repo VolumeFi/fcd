@@ -14,7 +14,7 @@ async function get(path: string, params?: Record<string, unknown>): Promise<any>
   const options = {
     headers: {
       'Content-Type': 'application/json',
-      'User-Agent': 'terra-fcd'
+      'User-Agent': 'paloma-fcd'
     },
     dispatcher: agent
   }

@@ -2,8 +2,8 @@ import 'jest-extended'
 import { SuperTest, Test } from 'supertest'
 import { setupAgent, terminateAPITest } from './lib/agent'
 
-const NORMAL_ACCOUNT = 'terra1940nsxkz62snd3azk3a9j79m4qd3qvwnrf2xvj'
-const VESTING_ACCOUNT = 'terra1qz27yu74kvv0xvxqlzhggdfkzkn2gg7fmez3we'
+const NORMAL_ACCOUNT = 'paloma1940nsxkz62snd3azk3a9j79m4qd3qvwnrf2xvj'
+const VESTING_ACCOUNT = 'paloma1qz27yu74kvv0xvxqlzhggdfkzkn2gg7fmez3we'
 
 describe('Account', () => {
   let agent: SuperTest<Test>

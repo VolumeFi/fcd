@@ -13,7 +13,7 @@ async function getRequest(path: string, params?: Record<string, string>): Promis
   const options = {
     headers: {
       'Content-Type': 'application/json',
-      'User-Agent': 'terra-fcd'
+      'User-Agent': 'paloma-fcd'
     },
     dispatcher: agent
   }
@@ -55,7 +55,7 @@ function base64Decode(data: string) {
 
 interface Reward {
   amount: string // '183373.654531179990300676uluna'
-  validator: string // 'terravaloper1nwrksgv2vuadma8ygs8rhwffu2ygk4j24w2mku'
+  validator: string // 'palomavaloper1nwrksgv2vuadma8ygs8rhwffu2ygk4j24w2mku'
   type: 'proposer_reward' | 'rewards' | 'commission'
 }
 

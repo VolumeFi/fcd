@@ -104,7 +104,7 @@ interface LcdValidatorConsensus {
 }
 
 interface LcdValidatorSigningInfo {
-  address: string // terravalcons...
+  address: string // palomavalcons...
   index_offset: string
   jailed_until: string
   missed_blocks_counter: string

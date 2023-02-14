@@ -4,13 +4,13 @@ import * as lcd from 'lib/lcd'
 const UNKNOWN_TX_HASH = '0C7A5F320FD3B91CEC2BEBDF539E8B71E1C120B04F95DEF6FB09EEBF9552391B'
 const VALID_TX_HASH = 'ED3EA0E1AA684546B8FC1CA57625688876A6DD7C9DF283FCAE271128C52A5D14'
 
-const UNKNOWN_TERRA_ADDRESS = 'terra12c5s58hnc3c0pjr5x7u68upsgzg2r8fwq5nlsy'
-const VALID_TERRA_ADDRESS = 'terra1dcegyrekltswvyy0xy69ydgxn9x8x32zdtapd8'
+const UNKNOWN_PALOMA_ADDRESS = 'paloma12c5s58hnc3c0pjr5x7u68upsgzg2r8fwq5nlsy'
+const VALID_PALOMA_ADDRESS = 'paloma1dcegyrekltswvyy0xy69ydgxn9x8x32zdtapd8'
 
-const UNKNOWN_VALOPER_ADDRESS = 'terravaloper1uwgg244kechjgqdyr9kyxtt7yyj5zqcugvna2d'
-const VALID_VALOPER_ADDRESS = 'terravaloper1dcegyrekltswvyy0xy69ydgxn9x8x32zdy3ua5'
-const VALID_VALTERRA_ADDRESS = 'terra1dcegyrekltswvyy0xy69ydgxn9x8x32zdtapd8'
-// const VALID_VALCONSPUB_ADDRESS = 'terravalconspub1zcjduepqwgwyky5375uk0llhwf0ya5lmwy4up838jevfh3pyzf5s3hd96xjslnexul'
+const UNKNOWN_VALOPER_ADDRESS = 'palomavaloper1uwgg244kechjgqdyr9kyxtt7yyj5zqcugvna2d'
+const VALID_VALOPER_ADDRESS = 'palomavaloper1dcegyrekltswvyy0xy69ydgxn9x8x32zdy3ua5'
+const VALID_VALPALOMA_ADDRESS = 'paloma1dcegyrekltswvyy0xy69ydgxn9x8x32zdtapd8'
+// const VALID_VALCONSPUB_ADDRESS = 'palomavalconspub1zcjduepqwgwyky5375uk0llhwf0ya5lmwy4up838jevfh3pyzf5s3hd96xjslnexul'
 
 const coinObject = {
   denom: expect.any(String),
@@ -98,15 +98,15 @@ describe('LCD', () => {
   })
 
   test('getAccount: not found', async () => {
-    await expect(lcd.getAccount(UNKNOWN_TERRA_ADDRESS)).resolves.toMatchObject({
+    await expect(lcd.getAccount(UNKNOWN_PALOMA_ADDRESS)).resolves.toMatchObject({
       balances: []
     })
   })
 
   test('getAccount: success', async () => {
-    await expect(lcd.getAccount(VALID_VALTERRA_ADDRESS)).resolves.toMatchObject({
+    await expect(lcd.getAccount(VALID_VALPALOMA_ADDRESS)).resolves.toMatchObject({
       account: {
-        address: VALID_VALTERRA_ADDRESS
+        address: VALID_VALPALOMA_ADDRESS
       },
       balances: expect.arrayContaining([coinObject])
     })
@@ -117,15 +117,15 @@ describe('LCD', () => {
   })
 
   test('getDelegations: not found', async () => {
-    await expect(lcd.getDelegations(UNKNOWN_TERRA_ADDRESS)).resolves.toBeArrayOfSize(0)
+    await expect(lcd.getDelegations(UNKNOWN_PALOMA_ADDRESS)).resolves.toBeArrayOfSize(0)
   })
 
   test('getDelegations: success', async () => {
-    const delegations = await lcd.getDelegations(VALID_TERRA_ADDRESS)
+    const delegations = await lcd.getDelegations(VALID_PALOMA_ADDRESS)
 
     expect(delegations).toBeArray()
 
-    const delegation = delegations.find((d) => d.delegation.delegator_address === VALID_TERRA_ADDRESS)
+    const delegation = delegations.find((d) => d.delegation.delegator_address === VALID_PALOMA_ADDRESS)
 
     expect(delegation).toMatchObject({
       balance: coinObject,
@@ -142,7 +142,7 @@ describe('LCD', () => {
   })
 
   test('getUnbondingDelegations: not found', async () => {
-    await expect(lcd.getUnbondingDelegations(VALID_TERRA_ADDRESS)).resolves.toBeArrayOfSize(0)
+    await expect(lcd.getUnbondingDelegations(VALID_PALOMA_ADDRESS)).resolves.toBeArrayOfSize(0)
   })
 
   test('getUnbondingDelegations: pass', async () => {

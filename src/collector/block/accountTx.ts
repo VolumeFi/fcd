@@ -1,6 +1,6 @@
 import { TxEntity, AccountTxEntity } from 'orm'
 import { uniq } from 'lodash'
-import { TERRA_ACCOUNT_REGEX } from 'lib/constant'
+import { PALOMA_ACCOUNT_REGEX } from 'lib/constant'
 
 function extractAddressFromMsg(msg: Transaction.Message): string[] {
   const addrs: string[] = []
@@ -15,7 +15,7 @@ function extractAddressFromMsg(msg: Transaction.Message): string[] {
       return
     }
 
-    if (typeof v === 'string' && TERRA_ACCOUNT_REGEX.test(v)) {
+    if (typeof v === 'string' && PALOMA_ACCOUNT_REGEX.test(v)) {
       addrs.push(v)
     } else if (Array.isArray(v)) {
       v.forEach(extractAddressesFromValue)
@@ -34,7 +34,7 @@ function extractAddressFromLog(log: Transaction.Log) {
   }
 
   return log.events
-    .map((event) => event.attributes.filter((attr) => TERRA_ACCOUNT_REGEX.test(attr.value)).map((attr) => attr.value))
+    .map((event) => event.attributes.filter((attr) => PALOMA_ACCOUNT_REGEX.test(attr.value)).map((attr) => attr.value))
     .flat()
 }
 
