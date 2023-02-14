@@ -2,7 +2,7 @@ import { KoaController, Validate, Get, Controller, Validator, Post } from 'koa-j
 import config from 'config'
 import { success } from 'lib/response'
 import { ErrorCodes } from 'lib/error'
-import { TERRA_ACCOUNT_REGEX, CHAIN_ID_REGEX } from 'lib/constant'
+import { PALOMA_ACCOUNT_REGEX, CHAIN_ID_REGEX } from 'lib/constant'
 import Mempool from 'lib/mempool'
 import { getBlock, getTx, getTxList } from 'service/transaction'
 
@@ -156,7 +156,7 @@ export default class TransactionController extends KoaController {
   @Get('/txs')
   @Validate({
     query: {
-      account: Joi.string().allow('').regex(TERRA_ACCOUNT_REGEX).description('User address'),
+      account: Joi.string().allow('').regex(PALOMA_ACCOUNT_REGEX).description('User address'),
       block: Joi.string()
         .allow('')
         .regex(/^\d{1,16}$/),
@@ -265,7 +265,7 @@ export default class TransactionController extends KoaController {
   @Get('/mempool')
   @Validate({
     query: {
-      account: Joi.string().allow('').regex(TERRA_ACCOUNT_REGEX).description('User address')
+      account: Joi.string().allow('').regex(PALOMA_ACCOUNT_REGEX).description('User address')
     }
   })
   async getMempool(ctx) {

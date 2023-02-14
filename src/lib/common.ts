@@ -2,7 +2,7 @@ import { default as parseDuration } from 'parse-duration'
 import { bech32 } from 'bech32'
 import { orderBy } from 'lodash'
 
-type Prefix = 'terra' | 'terrapub' | 'terravaloper' | 'terravaloperpub' | 'terravalcons' | 'terravalconspub'
+type Prefix = 'paloma' | 'palomapub' | 'palomavaloper' | 'palomavaloperpub' | 'palomavalcons' | 'palomavalconspub'
 
 export function convertAddress(prefix: Prefix, address: string): string {
   const { words } = bech32.decode(address)

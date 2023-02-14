@@ -1,6 +1,6 @@
 import * as crypto from 'crypto'
-import { Tx } from '@terra-money/terra.js'
-import { Tx as Tx_pb } from '@terra-money/terra.proto/cosmos/tx/v1beta1/tx'
+import { Tx } from '@paloma-money/paloma.js'
+import { Tx as Tx_pb } from '@paloma-money/paloma.proto/cosmos/tx/v1beta1/tx'
 
 export function isSuccessfulTx(tx: Transaction.LcdTransaction) {
   return tx.code ? false : true

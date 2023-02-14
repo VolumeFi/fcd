@@ -4,7 +4,7 @@ import { setupAgent, terminateAPITest } from './lib/agent'
 import config from 'config'
 
 const VALID_TX = 'E339D4F9B1529AB4946193F5FFB21F2E34404A47979F89E3FEF4CB1A98C7658D'
-const VALID_ACCOUNT = 'terra1940nsxkz62snd3azk3a9j79m4qd3qvwnrf2xvj'
+const VALID_ACCOUNT = 'paloma1940nsxkz62snd3azk3a9j79m4qd3qvwnrf2xvj'
 
 const INVALID_TX = '27453FD8220A3903359E99D50D06C6C8012D5F9CEC6ED7257BB0F5E9FB115F37'
 

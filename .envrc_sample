@@ -2,10 +2,10 @@
 # Reference: https://github.com/typeorm/typeorm/blob/master/docs/using-ormconfig.md
 export TYPEORM_CONNECTION=postgres
 export TYPEORM_HOST=localhost
-export TYPEORM_USERNAME=terra
-export TYPEORM_PASSWORD=terra
-export TYPEORM_DATABASE=terra_fcd
-export TYPEORM_PORT=5432 
+export TYPEORM_USERNAME=paloma
+export TYPEORM_PASSWORD=paloma
+export TYPEORM_DATABASE=paloma_fcd
+export TYPEORM_PORT=5432
 export TYPEORM_SYNCHRONIZE=false
 export TYPEORM_LOGGING=false
 export TYPEORM_ENTITIES=src/orm/*Entity.ts
@@ -13,8 +13,8 @@ export TYPEORM_MIGRATIONS=src/orm/migration/*.ts
 
 export SERVER_PORT=3060
 export CHAIN_ID=tequila-0004
-export LCD_URI=https://tequila-lcd.terra.dev
-export FCD_URI=https://tequila-fcd.terra.dev
+export LCD_URI=https://tequila-lcd.paloma.dev
+export FCD_URI=https://tequila-fcd.paloma.dev
 export RPC_URI=
 export SENTRY_DSN=
 #export USE_LOG_FILE=true
