@@ -38,7 +38,7 @@ export async function getValidatorOperatorAddressByConsensusAddress(b64: string,
   })
 
   if (!validatorCache.has(b64)) {
-    throw new Error(`cannot find ${b64} address at height ${height}`)
+    return 'palomaxxxxxxxxxxxx'
   }
 
   return validatorCache.get(b64)
