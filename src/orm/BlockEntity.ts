@@ -21,7 +21,7 @@ export default class BlockEntity {
   @Column()
   timestamp: Date
 
-  @Column({ type: 'char', length: 51 })
+  @Column({ type: 'char', length: 100 })
   proposer: string
 
   @OneToMany(() => TxEntity, (txs) => txs.block, {
