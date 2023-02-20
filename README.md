@@ -1,7 +1,5 @@
 # Paloma FCD
 
-![Banner](banner.png)
-
 ## Modules
 
 - ### Collector(Indexer)
