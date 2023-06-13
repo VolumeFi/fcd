@@ -205,6 +205,11 @@ export async function collectBlock(): Promise<void> {
   let latestIndexedBlock = await getLatestIndexedBlock()
   let nextSyncHeight = latestIndexedBlock ? latestIndexedBlock.height + 1 : config.INITIAL_HEIGHT
 
+  // we can force it to skip blocks just with the config
+  nextSyncHeight = Math.max(config.INITIAL_HEIGHT, nextSyncHeight)
+
+  console.log(nextSyncHeight)
+
   while (nextSyncHeight <= latestHeight) {
     const lcdBlock = await lcd.getBlock(nextSyncHeight.toString())
 
